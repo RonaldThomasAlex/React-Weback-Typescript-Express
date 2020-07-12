@@ -17,5 +17,15 @@ npm run build
 ```
 npm start
 ```
+## How to set up
 
+1. Create a package.json
+```
+npm init
+```
+please enter and choose the defaults
+
+2. Install Typescript and ts-node
+```
+npm install --save-dev typescript ts-node
 
