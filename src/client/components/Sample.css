@@ -1,0 +1,5 @@
+.Sample{
+    background-image: url("../assets/webpack.png");
+    height: 520px;
+    background-repeat: no-repeat;
+}
