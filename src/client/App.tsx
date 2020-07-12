@@ -4,7 +4,7 @@ import Sample from './components/Sample';
 const App = () => {
     return (
         <div>
-            <h1 style={{margin:0,textAlign:"center"}}>Webapck setup</h1>
+            <h1 style={{margin:0,textAlign:"center"}}>Webpack setup</h1>
             <Sample/>
         </div>
     );

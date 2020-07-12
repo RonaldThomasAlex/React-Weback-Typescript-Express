@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const svgToMiniDataURI = require('mini-svg-data-uri');
 
 module.exports = {
     entry: path.join(__dirname, "./src/client/index.tsx"), //Define the entry point for the project
@@ -29,6 +30,17 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                   limit: 8192,
+                },
+              },
+            ],
+          },
+          {
+            test: /\.svg$/i,
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  generator: (content) => svgToMiniDataURI(content.toString()),
                 },
               },
             ],
