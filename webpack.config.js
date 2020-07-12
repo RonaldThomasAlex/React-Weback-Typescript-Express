@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
     mode:"development",
     entry: path.join(__dirname, "./src/client/index.tsx"), //Define the entry point for the project
@@ -25,6 +27,7 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
           },
           {
+            //Loader for image files
             test: /\.(png|jpg|gif)$/i,
             use: [
               {
@@ -38,6 +41,7 @@ module.exports = {
         ],
     },
     plugins: [
+        new CleanWebpackPlugin(),//Plugin that will clean the build folder
         new HtmlWebpackPlugin({
         title: 'Output Management',
         template: path.join("./src/client", "index.html")
