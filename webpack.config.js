@@ -5,10 +5,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode:"development",
     entry: path.join(__dirname, "./src/client/index.tsx"), //Define the entry point for the project
-    output: {   //Define where the compliation package would be placed
-        filename: "bundle.js",
-        path: path.join(__dirname, "./build")
-    },
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js", ".json"]
@@ -47,4 +43,8 @@ module.exports = {
         template: path.join("./src/client", "index.html")
         }),
     ],
+    output: {   //Define where the compliation package would be placed
+      filename: "bundle.js",
+      path: path.join(__dirname, "./build")
+  },
 }
