@@ -14,9 +14,15 @@ module.exports = {
     module: {
         rules: [
           {
+            ///ts tsx file loaders
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: /node_modules/,
+          },
+          {
+            //css file loader
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
           },
         ],
     },
