@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode:"development",
     entry: path.join(__dirname, "./src/client/index.tsx"), //Define the entry point for the project
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
